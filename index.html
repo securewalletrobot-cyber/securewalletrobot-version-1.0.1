@@ -1,4 +1,4 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* ================= GLOBAL ================= */
+/* ================= BASE ================= */
 *{
   margin:0;
   padding:0;
@@ -30,7 +30,7 @@ body{
   100%{background-position:0% 50%}
 }
 
-/* ================= DEPTH GLOWS ================= */
+/* ================= SOFT GLOWS ================= */
 .glow{
   position:fixed;
   width:420px;
@@ -41,15 +41,8 @@ body{
   animation:drift 30s ease-in-out infinite alternate;
   z-index:-1;
 }
-.glow.right{
-  right:-120px;
-  bottom:-120px;
-  animation-delay:5s;
-}
-.glow.left{
-  left:-120px;
-  top:-120px;
-}
+.glow.left{left:-120px;top:-120px;}
+.glow.right{right:-120px;bottom:-120px;animation-delay:6s;}
 
 @keyframes drift{
   from{transform:translateY(0)}
@@ -77,7 +70,7 @@ header p{
   color:#b8dfff;
 }
 
-/* ================= SECTION CARD ================= */
+/* ================= SECTIONS ================= */
 .section{
   max-width:1100px;
   margin:40px auto;
@@ -108,7 +101,7 @@ header p{
   color:#dcefff;
 }
 
-/* ================= RULES ================= */
+/* ================= RULE LIST ================= */
 .rules{
   margin-top:10px;
 }
@@ -117,7 +110,6 @@ header p{
   margin:12px 0;
   padding-left:28px;
   position:relative;
-  color:#d8efff;
 }
 .rules li::before{
   content:"";
@@ -137,7 +129,7 @@ header p{
   100%{opacity:.4}
 }
 
-/* ================= MAINTENANCE ================= */
+/* ================= MAINTENANCE BOX ================= */
 .maintenance{
   background:linear-gradient(135deg,#0f2a44,#123c5c);
   border-left:5px solid #00e5ff;
@@ -220,16 +212,16 @@ footer{
     <li>UPI to Wallet fund addition is fully supported.</li>
     <li>Wallet to Wallet transfers are allowed within Secure Wallet.</li>
     <li>Wallet to UPI withdrawals are restricted to prevent fund exchanging.</li>
-    <li>This policy protects platform stability and all users.</li>
+    <li>This rule exists to protect system stability and all users.</li>
   </ul>
 </div>
 
 <div class="section">
-  <h2>Withdrawal Delay Transparency</h2>
+  <h2>Withdrawal Transparency</h2>
   <p>
-    Secure Wallet operates with complete transparency.  
-    Previous withdrawal delays occurred due to monthly payout processing limits.
-    These delays were operational and never intentional.
+    Secure Wallet follows a transparent payout process.  
+    Any past withdrawal delays were caused by monthly processing limits
+    and operational constraints, not by holding user funds.
   </p>
 </div>
 
@@ -238,7 +230,7 @@ footer{
   <div class="maintenance">
     Manual UPI withdrawals are temporarily unavailable.
     We are upgrading to an instant API-based withdrawal system
-    to ensure faster and more reliable payouts.
+    to ensure faster, automated, and delay-free payouts.
   </div>
 </div>
 
@@ -246,17 +238,30 @@ footer{
   <h2>Important Support Notice</h2>
   <p>
     Please contact support only if your manual withdrawal
-    has been pending for more than 24 hours.
+    has been pending for more than <b>24 hours</b>.
+    This helps us assist users efficiently and fairly.
   </p>
 </div>
 
 <div class="section">
   <h2>Official Contact Channels</h2>
   <div class="buttons">
-    <a class="btn" href="tg://openmessage?user_id=8582458580">Official Bot</a>
-    <a class="btn" href="tg://openmessage?user_id=6730201783">Support</a>
-    <a class="btn" href="https://t.me/SecureWalletRobot_Payout">Payout Channel</a>
-    <a class="btn" href="mailto:securewalletrobot@gmail.com">Email Support</a>
+    <a class="btn" href="https://t.me/Money_Hunters_0">
+      Official Channel
+    </a>
+
+    <a class="btn" href="https://t.me/TheNinjaGraphic">
+      Support
+    </a>
+
+    <a class="btn" href="https://t.me/SecureWalletRobot_Payout">
+      Payout Channel
+    </a>
+
+    <a class="btn"
+       href="https://mail.google.com/mail/?view=cm&fs=1&to=securewalletrobot@gmail.com">
+      Email Support
+    </a>
   </div>
 </div>
 
