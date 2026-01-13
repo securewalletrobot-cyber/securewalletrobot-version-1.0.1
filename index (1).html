@@ -1,0 +1,268 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Secure Wallet – Secure Payment For Everyone</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= GLOBAL ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:linear-gradient(120deg,#050b1e,#0a1633,#0e1f44);
+  background-size:300% 300%;
+  animation:bgFlow 25s ease infinite;
+  color:#eaf6ff;
+  overflow-x:hidden;
+}
+
+@keyframes bgFlow{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* ================= DEPTH GLOWS ================= */
+.glow{
+  position:fixed;
+  width:420px;
+  height:420px;
+  background:radial-gradient(circle,#00e5ff,transparent 70%);
+  filter:blur(140px);
+  opacity:0.35;
+  animation:drift 30s ease-in-out infinite alternate;
+  z-index:-1;
+}
+.glow.right{
+  right:-120px;
+  bottom:-120px;
+  animation-delay:5s;
+}
+.glow.left{
+  left:-120px;
+  top:-120px;
+}
+
+@keyframes drift{
+  from{transform:translateY(0)}
+  to{transform:translateY(120px)}
+}
+
+/* ================= HEADER ================= */
+header{
+  text-align:center;
+  padding:90px 20px 70px;
+}
+
+header h1{
+  font-size:46px;
+  font-weight:700;
+  letter-spacing:1px;
+  background:linear-gradient(90deg,#00e5ff,#00ffcc);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+header p{
+  margin-top:14px;
+  font-size:17px;
+  color:#b8dfff;
+}
+
+/* ================= SECTION CARD ================= */
+.section{
+  max-width:1100px;
+  margin:40px auto;
+  padding:42px;
+  background:rgba(255,255,255,0.06);
+  border-radius:24px;
+  backdrop-filter:blur(22px);
+  border:1px solid rgba(255,255,255,0.12);
+  box-shadow:0 0 60px rgba(0,229,255,0.12);
+  animation:softFloat 8s ease-in-out infinite;
+}
+
+@keyframes softFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+}
+
+.section h2{
+  font-size:24px;
+  font-weight:600;
+  color:#00e5ff;
+  margin-bottom:18px;
+}
+
+.section p{
+  font-size:15px;
+  line-height:1.8;
+  color:#dcefff;
+}
+
+/* ================= RULES ================= */
+.rules{
+  margin-top:10px;
+}
+.rules li{
+  list-style:none;
+  margin:12px 0;
+  padding-left:28px;
+  position:relative;
+  color:#d8efff;
+}
+.rules li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:8px;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#00e5ff;
+  box-shadow:0 0 10px #00e5ff;
+  animation:dotPulse 2s infinite;
+}
+@keyframes dotPulse{
+  0%{opacity:.4}
+  50%{opacity:1}
+  100%{opacity:.4}
+}
+
+/* ================= MAINTENANCE ================= */
+.maintenance{
+  background:linear-gradient(135deg,#0f2a44,#123c5c);
+  border-left:5px solid #00e5ff;
+  padding:26px;
+  border-radius:18px;
+  animation:borderGlow 3s infinite alternate;
+}
+@keyframes borderGlow{
+  from{box-shadow:0 0 12px rgba(0,229,255,.3)}
+  to{box-shadow:0 0 30px rgba(0,229,255,.6)}
+}
+
+/* ================= BUTTONS ================= */
+.buttons{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:26px;
+  margin-top:30px;
+}
+
+.btn{
+  text-decoration:none;
+  padding:20px;
+  text-align:center;
+  border-radius:18px;
+  font-weight:600;
+  color:#eafcff;
+  background:linear-gradient(135deg,#0d2b45,#124d73);
+  border:1px solid rgba(0,229,255,0.4);
+  position:relative;
+  overflow:hidden;
+  transition:.4s;
+}
+
+.btn::after{
+  content:"";
+  position:absolute;
+  top:-60%;
+  left:-60%;
+  width:220%;
+  height:220%;
+  background:linear-gradient(60deg,transparent,rgba(255,255,255,.25),transparent);
+  animation:shine 4s infinite;
+}
+
+@keyframes shine{
+  from{transform:translateX(-100%)}
+  to{transform:translateX(100%)}
+}
+
+.btn:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 25px rgba(0,229,255,.5);
+}
+
+/* ================= FOOTER ================= */
+footer{
+  text-align:center;
+  padding:40px 20px;
+  font-size:13px;
+  color:#9fcdf0;
+  opacity:.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow left"></div>
+<div class="glow right"></div>
+
+<header>
+  <h1>Secure Wallet</h1>
+  <p>Secure Payment For Everyone</p>
+</header>
+
+<div class="section">
+  <h2>Fund Usage & Exchange Policy</h2>
+  <ul class="rules">
+    <li>UPI to Wallet fund addition is fully supported.</li>
+    <li>Wallet to Wallet transfers are allowed within Secure Wallet.</li>
+    <li>Wallet to UPI withdrawals are restricted to prevent fund exchanging.</li>
+    <li>This policy protects platform stability and all users.</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Withdrawal Delay Transparency</h2>
+  <p>
+    Secure Wallet operates with complete transparency.  
+    Previous withdrawal delays occurred due to monthly payout processing limits.
+    These delays were operational and never intentional.
+  </p>
+</div>
+
+<div class="section">
+  <h2>UPI Withdrawal Maintenance</h2>
+  <div class="maintenance">
+    Manual UPI withdrawals are temporarily unavailable.
+    We are upgrading to an instant API-based withdrawal system
+    to ensure faster and more reliable payouts.
+  </div>
+</div>
+
+<div class="section">
+  <h2>Important Support Notice</h2>
+  <p>
+    Please contact support only if your manual withdrawal
+    has been pending for more than 24 hours.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Official Contact Channels</h2>
+  <div class="buttons">
+    <a class="btn" href="tg://openmessage?user_id=8582458580">Official Bot</a>
+    <a class="btn" href="tg://openmessage?user_id=6730201783">Support</a>
+    <a class="btn" href="https://t.me/SecureWalletRobot_Payout">Payout Channel</a>
+    <a class="btn" href="mailto:securewalletrobot@gmail.com">Email Support</a>
+  </div>
+</div>
+
+<footer>
+© Secure Wallet • Transparency • Security • Trust
+</footer>
+
+</body>
+</html>
